@@ -1,6 +1,3 @@
-public class Main {
-    
-}
 import java.util.Scanner;
 
 public class Main {
@@ -23,18 +20,24 @@ public class Main {
             int ch = sc.nextInt();
             sc.nextLine();
 
-            if (ch == 0) break;
+            if (ch == 0)
+                break;
 
             switch (ch) {
 
                 case 1:
                     System.out.println("1. Current  |  2. Past");
-                    int type = sc.nextInt(); sc.nextLine();
+                    int type = sc.nextInt();
+                    sc.nextLine();
 
-                    System.out.print("ID: "); String id = sc.nextLine();
-                    System.out.print("Name: "); String name = sc.nextLine();
-                    System.out.print("Category: "); String cat = sc.nextLine();
-                    System.out.print("Date: "); String date = sc.nextLine();
+                    System.out.print("ID: ");
+                    String id = sc.nextLine();
+                    System.out.print("Name: ");
+                    String name = sc.nextLine();
+                    System.out.print("Category: ");
+                    String cat = sc.nextLine();
+                    System.out.print("Date: ");
+                    String date = sc.nextLine();
 
                     if (type == 1) {
                         System.out.print("Meetings: ");
@@ -42,15 +45,14 @@ public class Main {
                         System.out.print("Duty: ");
                         int d = sc.nextInt();
 
-                        cm.addCommittee(new CurrentCommittee(id,name,cat,date,m,d));
-                    }
-                    else {
+                        cm.addCommittee(new CurrentCommittee(id, name, cat, date, m, d));
+                    } else {
                         System.out.print("Advisory Meetings: ");
                         int a = sc.nextInt();
                         System.out.print("Stay Back (true/false): ");
                         boolean s = sc.nextBoolean();
 
-                        cm.addCommittee(new PastCommittee(id,name,cat,date,a,s));
+                        cm.addCommittee(new PastCommittee(id, name, cat, date, a, s));
                     }
                     break;
 
@@ -73,20 +75,28 @@ public class Main {
                     String uid = sc.nextLine();
 
                     System.out.println("Update to: 1=Current 2=Past");
-                    int t2 = sc.nextInt(); sc.nextLine();
+                    int t2 = sc.nextInt();
+                    sc.nextLine();
 
-                    System.out.print("Name: "); String nm = sc.nextLine();
-                    System.out.print("Category: "); String ct = sc.nextLine();
-                    System.out.print("Date: "); String dt = sc.nextLine();
+                    System.out.print("Name: ");
+                    String nm = sc.nextLine();
+                    System.out.print("Category: ");
+                    String ct = sc.nextLine();
+                    System.out.print("Date: ");
+                    String dt = sc.nextLine();
 
                     if (t2 == 1) {
-                        System.out.print("Meetings: "); int m2 = sc.nextInt();
-                        System.out.print("Duty: "); int d2 = sc.nextInt();
-                        cm.updateCommittee(uid, new CurrentCommittee(uid,nm,ct,dt,m2,d2));
+                        System.out.print("Meetings: ");
+                        int m2 = sc.nextInt();
+                        System.out.print("Duty: ");
+                        int d2 = sc.nextInt();
+                        cm.updateCommittee(uid, new CurrentCommittee(uid, nm, ct, dt, m2, d2));
                     } else {
-                        System.out.print("Advisory Meetings: "); int a2 = sc.nextInt();
-                        System.out.print("Stay Back: "); boolean s2 = sc.nextBoolean();
-                        cm.updateCommittee(uid, new PastCommittee(uid,nm,ct,dt,a2,s2));
+                        System.out.print("Advisory Meetings: ");
+                        int a2 = sc.nextInt();
+                        System.out.print("Stay Back: ");
+                        boolean s2 = sc.nextBoolean();
+                        cm.updateCommittee(uid, new PastCommittee(uid, nm, ct, dt, a2, s2));
                     }
                     break;
 

@@ -41,7 +41,8 @@ public class CommitteeManager {
             }
         }
 
-        if (!found) System.out.println("No committees under this category.");
+        if (!found)
+            System.out.println("No committees under this category.");
     }
 
     // Search by date
@@ -55,7 +56,8 @@ public class CommitteeManager {
             }
         }
 
-        if (!found) System.out.println("No committees with this date.");
+        if (!found)
+            System.out.println("No committees with this date.");
     }
 
     // Update by ID
@@ -83,7 +85,12 @@ public class CommitteeManager {
         System.out.println("Committee not found.");
     }
 
-    // Getter for DD
-    public IConCommittee[] getCommittees() { return committees; }
-    public int getCount() { return count; }
+    // Getter for ID
+    public IConCommittee[] getCommittees() {
+        return committees;
+    }
+
+    public int getCount() {
+        return count;
+    }
 }

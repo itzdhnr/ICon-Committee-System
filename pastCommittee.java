@@ -1,10 +1,10 @@
-public class pastCommittee extends IConCommittee {
+public class PastCommittee extends IConCommittee {
     private int advisory_Meet;
     private boolean stay_Back;
 
-    public pastCommittee(String committee_ID, String committee_Name,
-                         String committee_Category, String commission_Date,
-                         int advisory_Meet, boolean stay_Back) {
+    public PastCommittee(String committee_ID, String committee_Name,
+            String committee_Category, String commission_Date,
+            int advisory_Meet, boolean stay_Back) {
 
         super(committee_ID, committee_Name, committee_Category, commission_Date);
         this.advisory_Meet = advisory_Meet;
